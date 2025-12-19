@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h2>👨‍💼 Admin Dashboard</h2>
+  <button onclick="logout()">Logout</button>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h3>Add Worker</h3>
+    <input id="name" placeholder="Worker Name">
+    <input id="dept" placeholder="Department">
+    <select id="shift">
+      <option>Morning</option>
+      <option>Evening</option>
+      <option>Night</option>
+    </select>
+    <input id="salary" placeholder="Base Salary">
+    <button onclick="addWorker()">Add Worker</button>
+  </div>
+
+  <div class="card wide">
+    <h3>All Worker Records</h3>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Dept</th>
+            <th>Shift</th>
+            <th>Overtime</th>
+            <th>Leave</th>
+            <th>Salary</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="table"></tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

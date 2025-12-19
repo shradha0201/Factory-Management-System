@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Worker Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h2>👷 Worker Dashboard</h2>
+  <button onclick="logout()">Logout</button>
+</header>
+
+<div class="worker-container">
+
+  <!-- LEFT SIDE: MY DETAILS -->
+  <div class="card">
+    <h3>👤 My Details</h3>
+
+    <input id="w_name" placeholder="Name" disabled>
+    <input id="w_dept" placeholder="Department" disabled>
+    <input id="w_shift" placeholder="Shift" disabled>
+    <input id="w_salary" placeholder="Salary" disabled>
+
+   
+  </div>
+
+  <!-- RIGHT SIDE: LEAVE + SALARY -->
+  <div class="card">
+    <h3>📝 Leave Application</h3>
+
+    <select id="leaveStatus">
+      <option value="Applied">Apply Leave</option>
+      <option value="Cancelled">Cancel Leave</option>
+    </select>
+
+    <button onclick="applyLeave()">Submit Leave</button>
+
+    <hr>
+
+    <h3>💰 Salary Details</h3>
+    <p id="salaryInfo"></p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
